@@ -41,6 +41,5 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 2rem 1.25rem;
   }
 `;
