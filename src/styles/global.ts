@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     --primary-color: #ea1d25;
     --secondary-color: #ffffff;
     --text-color: #5c6369;
+    --text-color-light: rgba(92, 99, 105, 0.45);
     --positive-variation-color: #87d883;
     --negative-variation-color: #f55a5f;
   }
@@ -37,6 +38,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 2rem 1.25rem;
   }
 `;

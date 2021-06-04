@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Header, PriceContainer } from "./styles";
 
 interface Props {
   tickerName: string;
@@ -14,8 +15,27 @@ export const StockCard: React.FC<Props> = ({
   date,
 }) => {
   return (
-    <div>
-      <h1>StockCard</h1>
-    </div>
+    <Container positive={variation >= 0}>
+      <Header>
+        <h2>{tickerName}</h2>
+        <p>
+          {new Intl.DateTimeFormat("pt-BR", {
+            dateStyle: "short",
+            timeStyle: "medium",
+          }).format(date)}
+        </p>
+      </Header>
+      <PriceContainer positive={variation >= 0}>
+        <span className="price">
+          {new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          }).format(tickerPrice)}
+        </span>
+        <div className="variation-container">
+          <span className="variation">{variation.toFixed(2)} %</span>
+        </div>
+      </PriceContainer>
+    </Container>
   );
 };
