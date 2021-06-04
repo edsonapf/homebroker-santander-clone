@@ -18,7 +18,6 @@ export const Container = styled.div<Props>`
   width: 21.375rem;
   height: 13.8125rem;
   padding: 0.5rem;
-  margin: 1rem;
 
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08), 0 10px 10px rgba(0, 0, 0, 0.05);

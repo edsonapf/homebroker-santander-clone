@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 93.75%; // 15px
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 731px) {
       font-size: 87.5%; // 14px
     }
   }
@@ -38,8 +38,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .main-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(21.375rem, 1fr));
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    
+    @media screen and (max-width: 683px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 `;
